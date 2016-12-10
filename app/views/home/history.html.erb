@@ -12,10 +12,10 @@
     <tbody>
       <% @games.each do |game| %>
         <tr>
-          <td><%= game.game_date.strftime("%b %d") %></td>
-          <td><%= game.opponent.email %></td>
-          <td><%= game.home_score %> - <%= game.opponent_score %></td>
-          <td><%= winner_result(game.home_score, game.opponent_score) %></td>
+          <td><%= game[:game_date].strftime("%b %d") %></td>
+          <td><%= game[:opponent][:email] %></td>
+          <td><%= game[:home_score] %> - <%= game[:opponent_score] %></td>
+          <td><%= winner_result(game[:home_score], game[:opponent_score]) %></td>
         </tr>
       <% end %>
     </tbody>
