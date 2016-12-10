@@ -12,16 +12,14 @@
     <tbody>
       <% @users.each do |user| %>
         <tr>
-          <td>Test</td>
+          <td><%= user.ranking %></td>
           <td><%= user.email %></td>
-          <td><%= user.user_score %></td>
-          <td>Test</td>
+          <td><%= user.score %></td>
+          <td><%= all_games(user).count %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
 </div>
 
-<!-- <div class="alert alert-warning" role="alert">This is a sample page.</div> -->
-
-<%= image_tag('leaderboard.png') %>
+<!-- <%= image_tag('leaderboard.png') %> -->
