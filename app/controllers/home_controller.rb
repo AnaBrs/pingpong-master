@@ -12,4 +12,11 @@ class HomeController < ApplicationController
     @user = current_user
     @opponents = User.where.not(id: current_user.id)
   end
+
+  def winner_result(home_score, opponent_score)
+    return 'W' if home_score > opponent_score
+    return 'L' if home_score < opponent_score
+  end
+  helper_method :winner_result
+
 end
