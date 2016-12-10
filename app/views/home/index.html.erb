@@ -1,0 +1,27 @@
+<h1 class='page-header'>Leaderboard</h1>
+<div class="leaderboard-table">
+    <table class="table">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Score</th>
+        <th>Games Played</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td>Test</td>
+          <td><%= user.email %></td>
+          <td>Test</td>
+          <td>Test</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<!-- <div class="alert alert-warning" role="alert">This is a sample page.</div> -->
+
+<%= image_tag('leaderboard.png') %>
