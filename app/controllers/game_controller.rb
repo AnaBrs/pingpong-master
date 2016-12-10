@@ -1,4 +1,7 @@
 class GameController < ApplicationController
+  after_create :update_scores_and_rankings
+
+  # Work in progress
   def create
     @game = Game.new
 
@@ -11,6 +14,12 @@ class GameController < ApplicationController
         format.json { render json: @game.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  private
+
+  def update_scores_and_rankings
+    # Code to update all user scores and rankings
   end
 
 end
